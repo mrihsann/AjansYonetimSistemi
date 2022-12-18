@@ -1,5 +1,5 @@
 class Oyuncu():
-    def __init__(self,tc_no,ad,soyad,yas,cinsiyet,boy,kilo,sacrenk,gozrenk,tenrenk,medenihali):
+    def __init__(self,tc_no,ad,soyad,yas,cinsiyet,boy,kilo,sacrenk,gozrenk,tenrenk,medenihali,tel_no,mail):
         self.tc_no=tc_no #primary key
         self.ad=ad
         self.soyad=soyad
@@ -11,6 +11,9 @@ class Oyuncu():
         self.gozrenk=gozrenk
         self.tenrenk=tenrenk
         self.medenihali=medenihali
+        self.tel_no=tel_no
+        self.mail=mail
+
     def Oyuncu_ekle(self,Dosya_adi):
         with open('Oyuncular.txt', 'a+') as f:
             f.write(f'TC No : {self.tc_no} ,')
@@ -23,15 +26,18 @@ class Oyuncu():
             f.write(f'Sac Renk : {self.sacrenk} ,')
             f.write(f'Goz Renk : {self.gozrenk} ,')
             f.write(f'Ten Renk : {self.tenrenk} ,')
-            f.write(f'Medeni Hali : {self.medenihali}\n')
+            f.write(f'Medeni Hali : {self.medenihali},')
+            f.write(f'Telefon Numarasi : {self.tel_no},')
+            f.write(f'Mail Adresi : {self.mail}\n')
+
 
     def Oyuncu_ara(self,input_tc):
         satir_takip=0
         with open('Oyuncular.txt', 'r') as f:
             a=0
             for line in f:
-                if input_tc == line[8:19]:
-                    #print("oyuncu bulundu")
+                if input_tc == int(line[8:19]):
+                    print("oyuncu bulundu")
                     a=1
                     #print(line)
                     return "{},{}".format(a,satir_takip)
@@ -55,11 +61,11 @@ class Oyuncu():
         print("Oyuncu Silindi")
 
 
-asd = Oyuncu(30514455968,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar")
+asd = Oyuncu(30514455968,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar",5462834845,"asd@gmail.com")
 asd.Oyuncu_ekle("Oyuncular.txt")
-asda = Oyuncu(30514455928,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar")
+asda = Oyuncu(30514455928,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar",5462834845,"asd@gmail.com")
 asda.Oyuncu_ekle("Oyuncular.txt")
-asdb = Oyuncu(36587766598,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar")
+asdb = Oyuncu(36587766598,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar",5462834845,"asd@gmail.com")
 asdb.Oyuncu_ekle("Oyuncular.txt")
-#arama=Oyuncu.Oyuncu_ara(Oyuncu,"30514455928")
-arama=Oyuncu.Oyuncu_sil(Oyuncu,"30514455928")
+arama=Oyuncu.Oyuncu_ara(Oyuncu,30514455928)
+#arama=Oyuncu.Oyuncu_sil(Oyuncu,"30514455928")

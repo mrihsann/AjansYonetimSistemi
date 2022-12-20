@@ -46,7 +46,7 @@ class Iletisim():
         print("Mesaj Silindi")
 
 
-asd = Iletisim("Bugra","Yildirim","05314700685","Erkek","Yonetici")
+asd = Iletisim("Bugra","Yildirim","05314700685","Erkeabjkgayvbkuak","Yoakjlvahuvbahvaşnvhjagbvyuabvi")
 asd.Mesaj_ekle("Mesajlar.txt",)
 asd = Iletisim("Bugra","Yildirim","05362586475","Erkek","Yonetici")
 asd.Mesaj_ekle("Mesajlar.txt",)

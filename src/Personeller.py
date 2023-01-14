@@ -32,7 +32,7 @@ class Personel():
                     return "{},{}".format(a,satir_takip)
                 satir_takip+=1
             if a==0:
-                print("Personel bulunamadı")
+                print("Personel bulunamadi")
                 return "{},{}".format(a,satir_takip)
 
     def Personel_sil(self,input_id):
@@ -46,7 +46,8 @@ class Personel():
                         lines.append(line)
             with open('Personeller.txt', 'w') as f:
                 f.writelines(lines)
-        print(lines)
+        for line in lines:
+            print(line)
         print("Personel Silindi")
 
 
@@ -55,14 +56,15 @@ class Personel():
         print("Maaş güncellendi. Yeni maş:",self.maas)
 
 
-
-asd = Personel(12345,"Bugra","Yildirim",21,"Erkek",5454,"Yonetici")
+"""
+asd = Personel(12345,"Bugra","Yildirim",21,"Erkek","Yonetici",5454)
 asd.Personel_ekle("Personeller.txt",)
-asda = Personel(34545,"Bugra","Yildirim",21,"Erkek",5454,"fotografci")
+asda = Personel(34545,"Bugra","Yildirim",21,"Erkek","fotografci",5454)
 asda.Personel_ekle("Personeller.txt")
-asdb = Personel(89765,"Bugra","Yildirim",21,"Erkek",5454,"sekreter")
+asdb = Personel(89765,"Bugra","Yildirim",21,"Erkek","sekreter",5454)
 asdb.Personel_ekle("Personeller.txt")
-asdc = Personel(42345,"Bugra","Yildirim",21,"Erkek",5454,"temizlikci")
+asdc = Personel(42345,"Bugra","Yildirim",21,"Erkek","temizlikci",5454)
 asdc.Personel_ekle("Personeller.txt")
 
 sil=Personel.Personel_sil(Personel,12345)
+"""

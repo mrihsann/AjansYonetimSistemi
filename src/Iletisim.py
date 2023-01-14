@@ -1,3 +1,4 @@
+
 class Iletisim():
     def __init__(self,ad,soyad,tel_no,konu_basligi,konu_icerigi):
         self.ad=ad
@@ -14,20 +15,21 @@ class Iletisim():
             f.write(f'Telefon Numarasi : {self.tel_no} ,')
             f.write(f'Konu Basligi : {self.konu_basligi} ,')
             f.write(f'Konu Icerigi : {self.konu_icerigi} \n')
-
+    
     def Mesaj_ara(self,input_id):
         satir_takip=0
         with open('Mesajlar.txt', 'r') as f:
             a=0
+        
             for line in f:
                 if input_id == line[49:60]:
                     #print("Mesaj bulundu")
                     a=1
-                    #print(line)
+                    print(line)
                     return "{},{}".format(a,satir_takip)
                 satir_takip+=1
             if a==0:
-                print("Mesaj bulunamadı")
+                print("Mesaj bulunamadi")
                 return "{},{}".format(a,satir_takip)
 
 
@@ -42,10 +44,11 @@ class Iletisim():
                         lines.append(line)
             with open('Mesajlar.txt', 'w') as f:
                 f.writelines(lines)
-        print(lines)
+        for line in lines:
+            print(line)
         print("Mesaj Silindi")
 
-
+"""
 asd = Iletisim("Bugra","Yildirim","05314700685","Erkeabjkgayvbkuak","Yoakjlvahuvbahvaşnvhjagbvyuabvi")
 asd.Mesaj_ekle("Mesajlar.txt",)
 asd = Iletisim("Bugra","Yildirim","05362586475","Erkek","Yonetici")
@@ -55,4 +58,5 @@ asd.Mesaj_ekle("Mesajlar.txt",)
 asd = Iletisim("Bugra","Yildirim","03659845678","Erkek","Yonetici")
 asd.Mesaj_ekle("Mesajlar.txt",)
 
-sil=Iletisim.Mesaj_sil(Iletisim,"05314700685")       
+sil=Iletisim.Mesaj_sil(Iletisim,"05314700685")  
+"""

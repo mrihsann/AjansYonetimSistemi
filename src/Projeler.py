@@ -55,13 +55,13 @@ class Projeler():
                         lines.append(line)
             with open('Projeler.txt', 'w') as f:
                 f.writelines(lines)
-        print(lines)
+        for line in lines:
+            print(line)
         print("Projeler Silindi")
 
-
-
+"""
 aavatar=Projeler("asd","20.12.2022","Bilim Kurgu",25,2,180)
-abvatar=Projeler("GAvatar","20.12.2022","Bilim Kurgu",25,2,180)
+abvatar=Projeler("GOT","20.12.2022","Bilim Kurgu",25,2,180)
 avatar=Projeler("Avatar","20.12.2022","Bilim Kurgu",25,2,180)
 atvatar=Projeler("fg","20.12.2022","Bilim Kurgu",25,2,180)
 
@@ -71,7 +71,4 @@ aavatar.Proje_Ekle()
 atvatar.Proje_Ekle()
 #Projeler.Proje_Ara(Projeler,"Avatar")
 Projeler.Proje_Sil(Projeler,"Avatar")
-
-
-
-
+"""

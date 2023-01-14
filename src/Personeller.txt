@@ -1,3 +1,0 @@
-Personel ID : 34545 ,Ad : Bugra ,Soyad : Yildirim ,Yas : 21 ,Cinsiyet : Erkek ,Birim : 5454 ,Maas : fotografci 
-Personel ID : 89765 ,Ad : Bugra ,Soyad : Yildirim ,Yas : 21 ,Cinsiyet : Erkek ,Birim : 5454 ,Maas : sekreter 
-Personel ID : 42345 ,Ad : Bugra ,Soyad : Yildirim ,Yas : 21 ,Cinsiyet : Erkek ,Birim : 5454 ,Maas : temizlikci 

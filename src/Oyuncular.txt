@@ -1,0 +1,1 @@
+TC No : 12345678978,Ad : sdf ,Soyad : sfd ,Yas : 21 ,Cinsiyet : er ,Boy : 520 ,Kilo : 25 ,Sac Renk : fdh ,Goz Renk : fdh ,Ten Renk : sdf ,Medeni Hali : sfg,Telefon Numarasi : 54621512451,Mail Adresi : asd@gmail.com

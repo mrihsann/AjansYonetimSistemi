@@ -1,0 +1,2 @@
+Personel ID : 12345 ,Ad : ad ,Soyad : sad ,Yas : 45 ,Cinsiyet : das ,Birim : ad ,Maas : 64
+Personel ID : 23654 ,Ad : sadas ,Soyad : sfaf ,Yas : 54 ,Cinsiyet : sdfs ,Birim : sfs ,Maas : 1541 

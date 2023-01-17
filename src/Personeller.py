@@ -29,42 +29,23 @@ class Personel():
                     #print("Personel bulundu")
                     a=1
                     #print(line)
-                    return "{},{}".format(a,satir_takip)
+                    return [a,satir_takip,line]
                 satir_takip+=1
             if a==0:
-                print("Personel bulunamadi")
-                return "{},{}".format(a,satir_takip)
+                #print("Personel bulunamadi")
+                return [a,satir_takip]
 
     def Personel_sil(self,input_id):
-        if Personel.Personel_ara(Personel,input_id)[0]=="0":
-            pass
+        if Personel.Personel_ara(Personel,input_id)[0]==0:
+            return "Personel Bulunamadı"
         else:
             lines = []
             with open('Personeller.txt', 'r') as f:
                 for i, line in enumerate(f):
-                    if i != int(Personel.Personel_ara(Personel,input_id)[2:]):
+                    if i != int(Personel.Personel_ara(Personel,input_id)[1]):
                         lines.append(line)
+
             with open('Personeller.txt', 'w') as f:
                 f.writelines(lines)
-        for line in lines:
-            print(line)
-        print("Personel Silindi")
+        return "Personel Silindi"
 
-
-    def Maas_zam(self,zam_orani):
-        self.maas=self.maas + (self.maas*(zam_orani/100))
-        print("Maaş güncellendi. Yeni maş:",self.maas)
-
-
-"""
-asd = Personel(12345,"Bugra","Yildirim",21,"Erkek","Yonetici",5454)
-asd.Personel_ekle("Personeller.txt",)
-asda = Personel(34545,"Bugra","Yildirim",21,"Erkek","fotografci",5454)
-asda.Personel_ekle("Personeller.txt")
-asdb = Personel(89765,"Bugra","Yildirim",21,"Erkek","sekreter",5454)
-asdb.Personel_ekle("Personeller.txt")
-asdc = Personel(42345,"Bugra","Yildirim",21,"Erkek","temizlikci",5454)
-asdc.Personel_ekle("Personeller.txt")
-
-sil=Personel.Personel_sil(Personel,12345)
-"""

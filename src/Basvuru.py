@@ -47,11 +47,3 @@ class Basvuru(Oyuncular.Oyuncu):
             print(line)
         print("Basvuru Silindi")
    
-#asd = Basvuru(30514455968,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar",5462834845,"asd@gmail.com")
-#asd.Basvuru_ekle("Basvurular.txt")
-#asda = Basvuru(30514455928,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar",5462834845,"asd@gmail.com")
-#asda.Basvuru_ekle("Basvurular.txt")
-#asdb = Basvuru(36587766598,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar",5462834845,"asd@gmail.com")
-#asdb.Basvuru_ekle("Basvurular.txt")
-#arama=Basvuru.Basvuru_ara(Basvuru,30514455928)
-#arama=Basvuru.Basvuru_sil(Basvuru,30514455928)

@@ -42,14 +42,14 @@ class Oyuncu():
             a=0
             for line in f:
                 if input_tc == int(line[8:19]):
-                    print("oyuncu bulundu")
+                    #print("oyuncu bulundu")
                     a=1
-                    print(line)
-                    return "{},{}".format(a,satir_takip)
+                    #print(line)
+                    return [a,satir_takip,line]
                 satir_takip+=1
             if a==0:
-                print("oyuncu bulunamadi")
-                return "{},{}".format(a,satir_takip)
+                #print("oyuncu bulunamadi")
+                return [a,satir_takip]
 
     def Oyuncu_sil(self,input_tc):
         if Oyuncu.Oyuncu_ara(Oyuncu,input_tc)[0]=="0":
@@ -58,21 +58,10 @@ class Oyuncu():
             lines = []
             with open('Oyuncular.txt', 'r') as f:
                 for i, line in enumerate(f):
-                    if i != int(Oyuncu.Oyuncu_ara(Oyuncu,input_tc)[2:]):
+                    if i == int(Oyuncu.Oyuncu_ara(Oyuncu,input_tc)[1]):
+                        print(line)
+                    else:
                         lines.append(line)
             with open('Oyuncular.txt', 'w') as f:
                 f.writelines(lines)
-        for line in lines:
-            print(line)
         print("Oyuncu Silindi")
-
-
-
-#asd = Oyuncu(30514455968,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar",5462834845,"asd@gmail.com")
-#asd.Oyuncu_ekle("Oyuncular.txt")
-#asda = Oyuncu(30514455928,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar",5462834845,"asd@gmail.com")
-#asda.Oyuncu_ekle("Oyuncular.txt")
-#asdb = Oyuncu(36587766598,"Bugra","Yildirim",21,"Erkek",187,90,"Siyah","Kahverengi","Buğday","Bekar",5462834845,"asd@gmail.com")
-#asdb.Oyuncu_ekle("Oyuncular.txt")
-#arama=Oyuncu.Oyuncu_ara(Oyuncu,30514455928)
-#arama=Oyuncu.Oyuncu_sil(Oyuncu,30514455928)

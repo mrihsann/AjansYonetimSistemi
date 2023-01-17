@@ -8,7 +8,7 @@ def index_bul(z):
                     x+=1
             return x
 
-class Projeler():
+class Proje():
     def __init__(self,ad,yayin_tarihi,kategori,oyuncu_sayisi,butce,suresi):
         self.ad=ad
         self.yayin_tarihi=yayin_tarihi
@@ -36,39 +36,21 @@ class Projeler():
             for line in f:
                 index=index_bul(line)
                 if ad == line[11:index-1]:
-                    print("Proje bulundu")
                     a=1
-                    print(line)
-                    return "{},{}".format(a,satir_takip)
+                    return [a,satir_takip,line]
                 satir_takip+=1
             if a==0:
-                print("Proje bulunamadı")
-                return "{},{}".format(a,satir_takip)
+                return [a,satir_takip]
     def Proje_Sil(self,ad):
-        if Projeler.Proje_Ara(Projeler,ad)[0]=="0":
-            pass
+        if Proje.Proje_Ara(Proje,ad)[0]==0:
+            return "Proje Bulunamadı"
         else:
             lines = []
             with open('Projeler.txt', 'r') as f:
                 for i, line in enumerate(f):
-                    if i != int(Projeler.Proje_Ara(Projeler,ad)[2:]):
+                    if i != int(Proje.Proje_Ara(Proje,ad)[1]):
                         lines.append(line)
             with open('Projeler.txt', 'w') as f:
                 f.writelines(lines)
-        for line in lines:
-            print(line)
-        print("Projeler Silindi")
+            return "Proje Silindi"
 
-"""
-aavatar=Projeler("asd","20.12.2022","Bilim Kurgu",25,2,180)
-abvatar=Projeler("GOT","20.12.2022","Bilim Kurgu",25,2,180)
-avatar=Projeler("Avatar","20.12.2022","Bilim Kurgu",25,2,180)
-atvatar=Projeler("fg","20.12.2022","Bilim Kurgu",25,2,180)
-
-avatar.Proje_Ekle()
-abvatar.Proje_Ekle()
-aavatar.Proje_Ekle()
-atvatar.Proje_Ekle()
-#Projeler.Proje_Ara(Projeler,"Avatar")
-Projeler.Proje_Sil(Projeler,"Avatar")
-"""

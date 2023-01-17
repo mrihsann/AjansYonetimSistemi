@@ -12,8 +12,3 @@ class Yoneticiler(Personeller.Personel,Oyuncular.Oyuncu):
         print("Oyuncu Listesi:\n")
         for line in lines:
             print(line)
-"""     
-deneme=Yoneticiler(12345,"ass","srt",23,"erkek","baskan",23456)
-deneme.Personel_ekle("Personeller.txt")
-deneme.Oyuncu_listesi()
-"""

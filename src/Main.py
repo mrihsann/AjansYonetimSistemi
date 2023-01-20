@@ -146,5 +146,6 @@ Yapmak istediğiniz işlemi seçin:
         print("Mesajınız iletiliyor...")
         time.sleep(1)
         print("Mesajınız iletildi.")
+        
 
         

@@ -43,7 +43,4 @@ class Basvuru(Oyuncular.Oyuncu):
                         lines.append(line)
             with open('Basvurular.txt', 'w') as f:
                 f.writelines(lines)
-        for line in lines:
-            print(line)
         print("Basvuru Silindi")
-   

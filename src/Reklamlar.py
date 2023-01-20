@@ -8,7 +8,7 @@ def index_bul(z):
                     x+=1
             return x
 
-class Proje():
+class Reklam():
     def __init__(self,ad,yayin_tarihi,kategori,oyuncu_sayisi,butce,suresi):
         self.ad=ad #primary key
         self.yayin_tarihi=yayin_tarihi
@@ -19,8 +19,8 @@ class Proje():
 
     
 
-    def Proje_Ekle(self):
-        with open('Projeler.txt', 'a+') as f:
+    def Reklam_Ekle(self):
+        with open('Reklamlar.txt', 'a+') as f:
                 f.write(f'Proje Ad : {self.ad} ,')
                 f.write(f'Yayin Tarihi : {self.yayin_tarihi} ,')
                 f.write(f'Kategori : {self.kategori} ,')
@@ -28,10 +28,9 @@ class Proje():
                 f.write(f'Butce : {self.butce} ,')
                 f.write(f'Sure : {self.suresi} \n')
 
-    def Proje_Ara(self,ad):
-        
+    def Reklam_Ara(self,ad):
         satir_takip=0
-        with open('Projeler.txt', 'r') as f:
+        with open('Reklamlar.txt', 'r') as f:
             a=0
             for line in f:
                 index=index_bul(line)
@@ -41,16 +40,16 @@ class Proje():
                 satir_takip+=1
             if a==0:
                 return [a,satir_takip]
-    def Proje_Sil(self,ad):
-        if Proje.Proje_Ara(Proje,ad)[0]==0:
-            return "Proje Bulunamadı"
+
+    def Reklam_Sil(self,ad):
+        if Reklam.Reklam_Ara(Reklam,ad)[0]==0:
+            return "Reklam Bulunamadı"
         else:
             lines = []
-            with open('Projeler.txt', 'r') as f:
+            with open('Reklamlar.txt', 'r') as f:
                 for i, line in enumerate(f):
-                    if i != int(Proje.Proje_Ara(Proje,ad)[1]):
+                    if i != int(Reklam.Reklam_Ara(Reklam,ad)[1]):
                         lines.append(line)
-            with open('Projeler.txt', 'w') as f:
+            with open('Reklamlar.txt', 'w') as f:
                 f.writelines(lines)
-            return "Proje Silindi"
-
+            return "Reklam Silindi"

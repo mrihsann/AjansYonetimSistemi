@@ -1,3 +1,0 @@
-TC No : 30514455968 ,Ad : Bugra ,Soyad : Yildirim ,Yas : 21 ,Cinsiyet : Erkek ,Boy : 187 ,Kilo : 90 ,Sac Renk : Siyah ,Goz Renk : Kahverengi ,Ten Renk : Bu�day ,Medeni Hali : Bekar,Telefon Numarasi : 5462834845,Mail Adresi : asd@gmail.com
-TC No : 36587766598 ,Ad : Bugra ,Soyad : Yildirim ,Yas : 21 ,Cinsiyet : Erkek ,Boy : 187 ,Kilo : 90 ,Sac Renk : Siyah ,Goz Renk : Kahverengi ,Ten Renk : Bu�day ,Medeni Hali : Bekar,Telefon Numarasi : 5462834845,Mail Adresi : asd@gmail.com
-TC No : 12355355 ,Ad : gh ,Soyad : rehh ,Yas : 34 ,Cinsiyet : has erkek ,Boy : 190 ,Kilo : 85 ,Sac Renk : et ,Goz Renk : r3th ,Ten Renk : rth3 ,Medeni Hali : bekar,Telefon Numarasi : 54628348477,Mail Adresi : gfhs@gmail.com
